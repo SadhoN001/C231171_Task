@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h2>Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign Up</button>
+    </form>
+    {% if form.errors %}
+       <ul>
+        {% for field, errors in form.errors.items %}
+            <li style="color: red;">
+                {{field}}: {{ errors|join:", " }}
+            </li>
+        {% endfor %}
+       </ul>
+    {% endif %}
+
+
+</body>
+</html>

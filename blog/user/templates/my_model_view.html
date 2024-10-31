@@ -1,0 +1,16 @@
+<!-- yourapp/templates/yourapp/my_model_view.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Model View</title>
+</head>
+<body>
+    <h1>MyModel Objects</h1>
+    <ul>
+        {% for object in objects %}
+            <li>{{ object.name }}: {{ object.description }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
